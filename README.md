@@ -8,8 +8,7 @@ This bot was originally just a fun project to assist with new people joining the
 2. When a person leaves, the bot notifies the 'officers' of who left and deletes their unique role and channel combination for automatic clean-up. 
 3. Provide a ton of commands for Quality-of-Life improvements across various games the group plays - Like for people who don't mute their microphone during Among Us (Looking at you, Chris.)
 
-A few things you will need to do if you're interested in getting this bot up and operational on your own server:
-
+    GETTING THIS BOT OPERATIONAL ON YOUR SERVER;
 1. Create an environment file with the following variables declared:
 
     DISCORDTOKEN= (The bot's token as displayed on the discord developer portal)
@@ -20,7 +19,7 @@ A few things you will need to do if you're interested in getting this bot up and
 
 2. Fill out the greeting you would like to have when a stranger joins your discord in the discord.py file. This is currently redacted from this repo.
 
-Current plans moving forward:
+    CURRENT PLANS;
 The following commands are not-yet implemented, though planned:
     $token - Fetch the price of a token in US.
     $rio [player] - Fetch the general raider.io score of a character.
