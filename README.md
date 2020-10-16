@@ -8,6 +8,7 @@ This bot was originally just a fun project to assist with new people joining the
 2. When a person leaves, the bot notifies the 'officers' of who left and deletes their unique role and channel combination for automatic clean-up. 
 3. Provide a ton of commands for Quality-of-Life improvements across various games the group plays - Like for people who don't mute their microphone during Among Us (Looking at you, Chris.)
 
+break;
 
     GETTING THIS BOT OPERATIONAL ON YOUR SERVER;
 
