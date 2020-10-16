@@ -10,8 +10,8 @@ This bot was originally just a fun project to assist with new people joining the
 
 
     GETTING THIS BOT OPERATIONAL ON YOUR SERVER;
-    
-1. Create an environment file with the following variables declared:
+
+A. Create an environment file with the following variables declared:
 
     DISCORDTOKEN= (The bot's token as displayed on the discord developer portal)
     OWNER= (The full screen name of the person you want to be able to execute some of the sensitive commands INCLUDING the pound sign. Something like JohnDoes#1234)
@@ -19,7 +19,7 @@ This bot was originally just a fun project to assist with new people joining the
     AMONGUS_CHANNEL= (Whatever channel is used primarily for your Among Us channels)
     OFFICER_CHANNEL= (Whatever channel is used for your private officer chat.)
 
-2. Fill out the greeting you would like to have when a stranger joins your discord in the discord.py file. This is currently redacted from this repo.
+B. Fill out the greeting you would like to have when a stranger joins your discord in the discord.py file. This is currently redacted from this repo.
 
     CURRENT PLANS;
 
