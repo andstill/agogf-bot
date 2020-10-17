@@ -14,21 +14,19 @@ break;
 
 A. Create an environment file with the following variables declared:
 
-    DISCORDTOKEN= (The bot's token as displayed on the discord developer portal)
-    OWNER= (The full screen name of the person you want to be able to execute some of the sensitive commands INCLUDING the pound sign. Something like JohnDoes#1234)
-    RAID_CHANNEL= (Whatever channel is used primarily for your raiding channel)
-    AMONGUS_CHANNEL= (Whatever channel is used primarily for your Among Us channels)
-    OFFICER_CHANNEL= (Whatever channel is used for your private officer chat.)
+    DISCORDTOKEN=(The bot's token as displayed on the discord developer portal)
+    OWNER=(The full screen name of the person you want to be able to execute some of the sensitive commands INCLUDING the pound sign. Something like JohnDoes#1234)
+    RAID_CHANNEL=(Whatever channel is used primarily for your raiding channel)
+    AMONGUS_CHANNEL=(Whatever channel is used primarily for your Among Us channels)
+    OFFICER_CHANNEL=(Whatever channel is used for your private officer chat.)
+    OFFICER_ROLE=(Whatever role is designated for "officers".)
 
 B. Fill out the greeting you would like to have when a stranger joins your discord in the discord.py file. This is currently redacted from this repo.
 
     CURRENT PLANS;
 
 The following commands are not-yet implemented, though planned:
-    $token - Fetch the price of a token in US.
     $rio [player] - Fetch the general raider.io score of a character.
-    $m+ - Fetches the affixes for the week in the US.
-    $privchan - Create a private test channel between the author and officers.
     Figure out music-playing capabilities over voice chat. 
 
 A lot of us are thinking of fun little ideas just to make this a challenging bot to expand upon, such as:
