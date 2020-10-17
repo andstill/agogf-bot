@@ -35,21 +35,7 @@ async def on_member_join(ctx):
     selfrole = discord.utils.get(ctx.guild.roles, name=name)
     await ctx.add_roles(selfrole)
     time.sleep(5)
-    await channel.send("""here Hello, newcomer! Welcome to the <A Group of Good Friends> Discord server!
-    This channel you were just pinged in is private -- Only specific people of the guild (Officers, GM, and yourself) are actually able to see this message, as we intend to use this channel for your application process. You can post your application in this channel and we'll interacting with your privately in this channel. You're more than welcome to talk to anyone in the guild in any channel available to you, but anything related to recruitment will probably be kept here.
-
-**__How to proceed:__**
-    Fill out the questions posted below, they aren't too serious and if you don't think you have a good answer for one then still answer it. This isn't a cut-throat job application, it's just important information we're gathering for recruitment for now.
-```--What's your previous raiding experience? If it was just heroic, that's fine, but we want to know:
---This guild is entirely focused on achieving Cutting Edge every tier plus ample time to farm it. This obviously requires a certain amount of dedication and a relatively competitive mindset from everyone in the guild, but we're not elitist about it. Do you think your goals line up with ours?
---What role are you primarily interested in, and with that your main and any alts?
---Is there any warcraftlogs or raider.io you can give of anyone current? If not, that's fine!
-
-        FUN QUESTIONS
---What's your favorite raid and your favorite raid boss in WoW?
---Outside of WoW, what games do you enjoy playing? This group is having a ton of fun with Among Us and Counter-Strike lately. Interested in either of these games?
---Funniest video(s) you've seen on the internet recently, we want to see them. NSFW is totally allowed:```
-Again, we appreciate your interest and we'll be responding to you ASAP! Feel free to add any information or ask us any questions in the mean time.""")
+    await channel.send("""Redacted for git commit""")
     return
 
 @bot.event
@@ -70,12 +56,15 @@ async def on_member_remove(ctx):
 async def cmd(ctx):
     await ctx.send("""
     ```The following commands are what I have been programmed to respond to:
-    $delrole [role] - Deletes the role and channel of a user.
+    $delrole [role] - Deletes the role.
+    $delchannel [channel] - Deletes the channel.
     $muteau - Mutes the designated Among Us channel.
     $unmuteau - Unmutes everybody in the designated Among Us channel.
     $muteraid - Mutes the designated Raid channel.
     $unmuteraid - Unmutes the designated Raid channel.
     $mplus - Links to a website of all-knowing m+
+    $privchan - Creates a private channel with officers and the user in question.
+    $help - Displays an automated help message.
 
     $cmd - List this menu you're reading right now.
     $botup - A simple check to see if I am up and operational. $help and $cmd also works.
@@ -85,7 +74,6 @@ async def cmd(ctx):
 The following commands are not-yet implemented, though planned:
     $token - Fetch the price of a token in US.
     $rio [player] - Fetch the general raider.io score of a character.
-    $privchan - Create a private test channel between the author and officers.
 
 ----------------------------
 
@@ -167,19 +155,16 @@ async def unmuteraid(ctx):
 @bot.command(pass_context=True)
 async def delrole(ctx, role: discord.Role):
     if str(ctx.author) == owner:
-        guild = ctx.guild
-        selfchannel = discord.utils.get(ctx.guild.channels, name=role)
-        officerchannel = discord.utils.get(ctx.guild.channels, name=officer)
         await role.delete()
         await ctx.send("The role and channel was deleted.")
-    if str(ctx.author) != owner:
+    else:
         await ctx.send("Owner of the discord did not write the command. Ignoring.")
     return
 
 @bot.command(pass_context=True)
-async def delchannel(ctx, channel_name):
+async def delchannel(ctx, channel: discord.TextChannel):
     if str(ctx.author) == owner:
-        await bot.delete_channel("channel_name")
+        await channel.delete()
         await ctx.send("Channel deleted.")
     else:
         await ctx.send("Owner of the discord did not write the command. Ignoring.")
@@ -198,3 +183,4 @@ async def info_error(ctx, error):
     return
 
 bot.run(token)
+
